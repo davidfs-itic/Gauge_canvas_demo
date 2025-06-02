@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04/05/2017, 15:36:33
+    Author     : david
+*/
+
+body {
+ margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ margin-left: 0px;
+ background-color:#2d2d2d;
+}
+
+
+#capsalera
+{
+    font-family: ict_kabel_bold ;
+    font-size: 50px;
+    text-align: left;
+    letter-spacing: 3px;
+    position:absolute; 
+    top:0;width:90%;
+    height:80px;
+    margin-left: 3%;
+    margin-top: 10px;
+    /*background: rgba(226,113,13,1);*/
+
+
+}
+
+.inset-text{
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none  ;
+  /*color: rgba(241,128,31,1);*/
+  color: rgba(255,134,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: pre;
+  padding-top: 10px;
+  text-shadow: 1px 1px 0 rgba(200,200,200,0.6) , -1px -1px 1px rgba(0,0,0,0.67) ;
+  
+}
+
+

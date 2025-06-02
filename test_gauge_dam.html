@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <title>Demo 3_main</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="fonts.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="gaugesensors.js"></script>
+
+       <script type="text/javascript">
+
+    
+
+            WebFontConfig = {
+              google: { families: [ 'Expletus+Sans:500:latin','Orbitron:700:latin', 'Source+Code+Pro:600:latin','Roboto+Condensed:300:latin'] },
+              custom: {
+                families: ['robotolight','robotoregular','robotobold','expeltus','ict_kabel_medium','ict_kabel_bold']
+              },
+              active: function() {
+
+                    drawgauges();
+                  }
+              };
+            (function() {
+              var wf = document.createElement('script');
+              wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+              wf.type = 'text/javascript';
+              wf.async = 'true';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(wf, s);
+            })();
+
+        </script>
+
+
+    </head>
+    <body>
+
+        <canvas id=canvas_gaugetemperatura1 width=320 height=700 style="position:absolute; top:75px; left:30px;z-index:1"></canvas>
+
+<script type="text/javascript">
+
+//-Variable que dibuixarà en el canvas.
+var gaugetemperatura1= new DashboardGauge2('canvas_gaugetemperatura1');
+//---Paràmetres de funcionament 
+gaugetemperatura1.ValueMin=26;
+gaugetemperatura1.ValueMax=34;
+gaugetemperatura1.Value=30.0;
+gaugetemperatura1.ValueText="30.0";
+gaugetemperatura1.HighThereshold=30;
+gaugetemperatura1.LowThereshold=26.8;
+gaugetemperatura1.Title="Temperatura";
+gaugetemperatura1.DecimalFormat=1;
+gaugetemperatura1.TitleFont="robotolight";
+gaugetemperatura1.ValueFont="expeltus";
+gaugetemperatura1.Textureimage=images[6];
+gaugetemperatura1.Icon=images[7];
+
+//Funcio dibuixar
+function drawgauges(){
+                gaugetemperatura1.Value=28,3;
+                gaugetemperatura1.ValueText="28,3";
+                gaugetemperatura1.paint();
+}
+
+
+</script>
+    <div id="fons"  style="z-index:-1;position:absolute; top:0;width:100%;height:100%; background-image: url('./media/fons-negre2.jpg')"></div>
+        <div id="capsalera"  class="" style="z-index:0;color: whitesmoke">TEST GAUGE</div>
+        <canvas id="network_icon" style="z-index:0;position: absolute;left:950px;top:10px;width: 40px;height:40px;"></canvas>
+    </body>
+</html>
