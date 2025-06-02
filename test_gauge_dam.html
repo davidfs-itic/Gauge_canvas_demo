@@ -47,7 +47,7 @@ and open the template in the editor.
         <canvas id=canvas_gaugetemperatura1 width=320 height=700 style="position:absolute; top:75px; left:30px;z-index:1"></canvas>
 
 <script type="text/javascript">
-
+//img= loadImage('./media/temperatura-01.svg');
 //-Variable que dibuixarà en el canvas.
 var gaugetemperatura1= new DashboardGauge2('canvas_gaugetemperatura1');
 //---Paràmetres de funcionament 
@@ -61,8 +61,7 @@ gaugetemperatura1.Title="Temperatura";
 gaugetemperatura1.DecimalFormat=1;
 gaugetemperatura1.TitleFont="robotolight";
 gaugetemperatura1.ValueFont="expeltus";
-gaugetemperatura1.Textureimage=images[6];
-gaugetemperatura1.Icon=images[7];
+gaugetemperatura1.Icon=img;
 
 //Funcio dibuixar
 function drawgauges(){
