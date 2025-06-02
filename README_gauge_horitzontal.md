@@ -1,0 +1,1 @@
+# Documentació Branch gauge horitzontal
