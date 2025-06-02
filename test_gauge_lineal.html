@@ -1,0 +1,73 @@
+
+
+<head>
+
+    <title>Demo 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="fonts.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="gaugesensors_lineal_v2.js"></script>
+
+    <script type="text/javascript">
+
+    
+
+        WebFontConfig = {
+          google: { families: [ 'Expletus+Sans:500:latin','Orbitron:700:latin', 'Source+Code+Pro:600:latin','Roboto+Condensed:300:latin'] },
+          custom: {
+            families: ['robotolight','robotoregular','robotobold','expeltus','ict_kabel_medium','ict_kabel_bold']
+          },
+          active: function() {
+
+                drawgauges();
+              }
+          };
+        (function() {
+          var wf = document.createElement('script');
+          wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+          wf.type = 'text/javascript';
+          wf.async = 'true';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(wf, s);
+        })();
+
+    </script>
+
+</head>
+<body>
+
+<canvas id=canvas_ph width=300 height=200 style="position:absolute; top:200px; left:150px;z-index:1"></canvas>
+<script type="text/javascript">
+
+    var gaugeph= new DashboardGaugeLinear2('canvas_ph');
+    
+  
+    //---gaugeph
+    gaugeph.ValueMin=6;
+    gaugeph.ValueMax=7.9;
+    gaugeph.Value=7;
+    gaugeph.ValueText="7";
+    gaugeph.HighThereshold=7;
+    gaugeph.LowThereshold=6.5;
+    //gaugeph.Title="Ph Aigua";
+    //gaugeph.marginheader=70;
+    gaugeph.Title="";
+    gaugeph.marginheader=0;
+    gaugeph.debug=1;
+    
+        
+    
+    
+    //Funcio dibuixar
+function drawgauges(){
+
+    gaugeph.paint();
+}  
+    
+     
+            
+    </script>
+
+</body>
